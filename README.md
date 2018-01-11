@@ -16,3 +16,7 @@ Each branch of this repository stores the code, of the different ***Apps***, ***
 ### Birthday Card App
 
 The code for this simple **Birthday Card App** is stored in the branch [study/birthday-card](https://github.com/EnduranceCode/AndroidBasicsChallenge/tree/study/birthday-card).
+
+### Make your own card
+
+The code developed to fulfill the instructions given in the **Make Your Own Card App** *Chapter* is stored in the branch [study/own-card](https://github.com/EnduranceCode/AndroidBasicsChallenge/tree/study/own-card).
