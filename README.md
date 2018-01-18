@@ -20,3 +20,9 @@ The code for this simple **Birthday Card App** is stored in the branch [study/bi
 ### Make your own card
 
 The code developed to fulfill the instructions given in the **Make Your Own Card App** *Chapter* is stored in the branch [study/own-card](https://github.com/EnduranceCode/AndroidBasicsChallenge/tree/study/own-card).
+
+## Projects
+
+### Project 1: Single Screen App
+
+In this project it's built a single screen app in Android Studio that displays information about Udacity, along with a photo. This project's code is stored in the branch   [project1](https://github.com/EnduranceCode/AndroidBasicsChallenge/tree/project1).
