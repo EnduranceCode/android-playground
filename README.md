@@ -21,6 +21,14 @@ The code for this simple **Birthday Card App** is stored in the branch [study/bi
 
 The code developed to fulfill the instructions given in the **Make Your Own Card App** *Chapter* is stored in the branch [study/own-card](https://github.com/EnduranceCode/AndroidBasicsChallenge/tree/study/own-card).
 
+## Lesson: Making an App Interactive
+
+### Just Java
+
+The code written for the **Just Java App** is stored in the branch [study/just-java](https://github.com/EnduranceCode/AndroidBasicsChallenge/tree/study/just-java).
+
+**Just Java** is an Android app with buttons and text fields that a user can interact with, that allows a user to fill out a form to order coffee.
+
 ## Projects
 
 ### Project 1: Single Screen App
