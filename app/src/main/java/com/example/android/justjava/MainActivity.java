@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void increment(View view) {
         int quantity = 2;
-        quantity = 3;
+        quantity = quantity + 1;
         display(quantity);
         displayPrice(quantity * 5);
     }
