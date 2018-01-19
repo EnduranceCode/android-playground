@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
     public void increment(View view) {
         quantity = quantity + 1;
         display(quantity);
-        displayPrice(quantity * 5);
     }
 
     /**
@@ -44,15 +43,12 @@ public class MainActivity extends AppCompatActivity {
     public void decrement(View view) {
         quantity = quantity - 1;
         display(quantity);
-        displayPrice(quantity * 5);
     }
 
     /**
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int quantity = 2;
-        display(quantity);
         displayPrice(quantity * 5);
     }
 
