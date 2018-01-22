@@ -11,14 +11,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // PASTE CODE YOU WANT TO TEST HERE
-        int weekday = 5;
-        int weekend = 9;
-        int optimalHours = 7 * 8;
-
-        int actualHours = 5 * weekday;
-        actualHours = actualHours + weekend * 2;
-        int solution = optimalHours - actualHours;
-        display(solution);
+        int day1 = 15;
+        int day2 = 22;
+        int day3 = 18;
+        float travelTime = (day1 + day2 + day3) / 3;
+        display(travelTime);
 
     }
 
@@ -33,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void display(int text) {
+        TextView t = (TextView) findViewById(R.id.display_text_view);
+        t.setText(text + "");
+    }
+
+    public void display(float text) {
         TextView t = (TextView) findViewById(R.id.display_text_view);
         t.setText(text + "");
     }
