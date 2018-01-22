@@ -33,6 +33,10 @@ The code written for the **Just Java App** is stored in the branch [study/just-j
 
 The code written following the second Practice Set of the [**Google Developer Challenge Scholarship**](https://sites.google.com/knowlabs.com/udacitydevscholars17/home?utm_source=vero&utm_medium=email&utm_content=control&utm_campaign=Scholarship_Newsletter1_20171201&utm_term=Newsletter&vero_id=10879238292&vero_conv=Z3_qSuIADu6XuicUr7YFYZk45oLkKFUVR7N1JTE6CpsIRv1Nn1smm8r-NupKH0NlX8EQHwcoU-xyDEv0nz-sbuz6jQjCBGwj) is stored in the branch [study/practice-set-2](https://github.com/EnduranceCode/AndroidBasicsChallenge/tree/study/practice-set-2).
 
+### Court Counter
+
+The code written for the **Court Counter App** is stored in the branch [study/court-counter](https://github.com/EnduranceCode/AndroidBasicsChallenge/tree/study/court-counter).
+
 ## Projects
 
 ### Project 1: Single Screen App
