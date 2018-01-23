@@ -5,5 +5,6 @@
     <string name="three_points">+3 Points</string>
     <string name="two_points">+2 Points</string>
     <string name="free_throw">Free Throw</string>
+    <string name="reset">Reset</string>
 
 </resources>
