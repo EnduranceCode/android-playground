@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <dimen name="mainScreenPadding">16dp</dimen>
+    <dimen name="titleBottomMargin">16dp</dimen>
+    <dimen name="scoreBottomMargin">16dp</dimen>
+    <dimen name="buttonBottomMargin">16dp</dimen>
+
+
 </resources>
