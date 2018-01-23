@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
      * Update total score when Team scores two points
      */
     public void twoPointsTeamA (View view) {
-        scoreTeamA = 2;
+        scoreTeamA = scoreTeamA + 2;
         displayForTeamA(scoreTeamA);
     }
 
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
      * Update total score when Team scores a free throw
      */
     public void freeThrowTeamA (View view) {
-        scoreTeamA = 1;
+        scoreTeamA = scoreTeamA + 1;
         displayForTeamA(scoreTeamA);
     }
 }
