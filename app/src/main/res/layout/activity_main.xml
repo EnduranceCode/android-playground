@@ -80,21 +80,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/scoreBottomMargin"
-                android:onClick="threePointsTeamA"
+                android:onClick="threePointsTeamB"
                 android:text="@string/three_points" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/scoreBottomMargin"
-                android:onClick="twoPointsTeamA"
+                android:onClick="twoPointsTeamB"
                 android:text="@string/two_points" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/scoreBottomMargin"
-                android:onClick="freeThrowTeamA"
+                android:onClick="freeThrowTeamB"
                 android:text="@string/free_throw" />
         </LinearLayout>
     </LinearLayout>

@@ -8,6 +8,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     int scoreTeamA = 0;
+    int scoreTeamB = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Update total score when Team scores three points
+     * Displays the given score for Team B.
+     */
+    public void displayForTeamB(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    /**
+     * Update total score when Team A scores three points
      */
     public void threePointsTeamA (View view) {
         scoreTeamA = scoreTeamA + 3;
@@ -32,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Update total score when Team scores two points
+     * Update total score when Team A scores two points
      */
     public void twoPointsTeamA (View view) {
         scoreTeamA = scoreTeamA + 2;
@@ -40,10 +49,34 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Update total score when Team scores a free throw
+     * Update total score when Team A scores a free throw
      */
     public void freeThrowTeamA (View view) {
         scoreTeamA = scoreTeamA + 1;
         displayForTeamA(scoreTeamA);
+    }
+
+    /**
+     * Update total score when Team B scores three points
+     */
+    public void threePointsTeamB (View view) {
+        scoreTeamB = scoreTeamB + 3;
+        displayForTeamB(scoreTeamB);
+    }
+
+    /**
+     * Update total score when Team B scores two points
+     */
+    public void twoPointsTeamB (View view) {
+        scoreTeamB = scoreTeamB + 2;
+        displayForTeamB(scoreTeamB);
+    }
+
+    /**
+     * Update total score when Team B scores a free throw
+     */
+    public void freeThrowTeamB (View view) {
+        scoreTeamB = scoreTeamB + 1;
+        displayForTeamB(scoreTeamB);
     }
 }
