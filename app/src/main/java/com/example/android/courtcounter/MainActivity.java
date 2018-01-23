@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
      * Update total score when Team scores three points
      */
     public void threePointsTeamA (View view) {
-        scoreTeamA = 3;
+        scoreTeamA = scoreTeamA + 3;
         displayForTeamA(scoreTeamA);
     }
 
