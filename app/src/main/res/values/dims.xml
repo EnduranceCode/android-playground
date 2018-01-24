@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="viewTopPadding">16dp</dimen>
+    <dimen name="viewBottomPadding">32dp</dimen>
+    <dimen name="viewHorizontalPadding">24dp</dimen>
+    <dimen name="titleBottomMargin">16dp</dimen>
+    <dimen name="scoreBottomMargin">24dp</dimen>
+    <dimen name="buttonBottomMargin"></dimen>
+    <dimen name="textViewSize">14sp</dimen>
+    <dimen name="scoreViewSize">56sp</dimen>
+</resources>
