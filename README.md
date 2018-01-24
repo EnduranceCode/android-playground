@@ -42,3 +42,7 @@ The code written for the **Court Counter App** is stored in the branch [study/co
 ### Project 1: Single Screen App
 
 In this project it's built a single screen app in Android Studio that displays information about Udacity, along with a photo. This project's code is stored in the branch   [project1](https://github.com/EnduranceCode/AndroidBasicsChallenge/tree/project1).
+
+### Project 2: Court Counter App
+
+The goal of this project is to create an Score Keeper app which gives a user the ability to keep track of the score of two Taekwondo fighters. This project's code is stored in the branch   [project2](https://github.com/EnduranceCode/AndroidBasicsChallenge/tree/project2).
