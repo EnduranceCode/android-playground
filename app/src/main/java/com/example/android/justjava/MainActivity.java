@@ -49,20 +49,21 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int price = quantity * 5;
+        int price = calculatePrice();
         String priceMessage ="Total: " + price + " €";
         priceMessage = priceMessage + "\n" + "Thank you!";
         displayMessage(priceMessage);
-
-        calculatePrice();
     }
 
     /**
      * Calculates the price of the order
+     *
+     * @return Total Price
      */
 
-    private void calculatePrice() {
+    private int calculatePrice() {
         int price = quantity * 5;
+        return price;
     }
 
     /**
