@@ -37,11 +37,15 @@ The code written following the second Practice Set of the [**Google Developer Ch
 
 The code written for the **Court Counter App** is stored in the branch [study/court-counter](https://github.com/EnduranceCode/AndroidBasicsChallenge/tree/study/court-counter).
 
-## Lesson: Object-Oriented-Programing
+## Lesson: Object-Oriented-Programming
 
 ### Calling Methods Practice
 
 The code written to practice ***Calling Methods*** is stored in the branch [study/calling-methods](https://github.com/EnduranceCode/AndroidBasicsChallenge/tree/study/calling-methods).
+
+### Inheriting Behavior Practice
+
+The code written to better understand the ***Inheriting Behavior*** in Object-Oriented-Programming is stored in the branch [study/inheriting-behavior](https://github.com/EnduranceCode/AndroidBasicsChallenge/tree/study/inheriting-behavior).
 
 ## Projects
 
