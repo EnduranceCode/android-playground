@@ -37,6 +37,12 @@ The code written following the second Practice Set of the [**Google Developer Ch
 
 The code written for the **Court Counter App** is stored in the branch [study/court-counter](https://github.com/EnduranceCode/AndroidBasicsChallenge/tree/study/court-counter).
 
+## Lesson: Object-Oriented-Programing
+
+### Calling Methods Practice
+
+The code written to practice ***Calling Methods*** is stored in the branch [study/calling-methods](https://github.com/EnduranceCode/AndroidBasicsChallenge/tree/study/calling-methods).
+
 ## Projects
 
 ### Project 1: Single Screen App
