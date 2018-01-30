@@ -47,6 +47,10 @@ The code written to practice ***Calling Methods*** is stored in the branch [stud
 
 The code written to better understand the ***Inheriting Behavior*** in Object-Oriented-Programming is stored in the branch [study/inheriting-behavior](https://github.com/EnduranceCode/AndroidBasicsChallenge/tree/study/inheriting-behavior).
 
+### Set Data on Views Practice
+
+The code written to practice ***Setting Data on Views*** is stored in the branch [study/set-views-data](https://github.com/EnduranceCode/AndroidBasicsChallenge/tree/study/set-views-data).
+
 ## Projects
 
 ### Project 1: Single Screen App
