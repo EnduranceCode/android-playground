@@ -51,6 +51,10 @@ The code written to better understand the ***Inheriting Behavior*** in Object-Or
 
 The code written to practice ***Setting Data on Views*** is stored in the branch [study/set-views-data](https://github.com/EnduranceCode/AndroidBasicsChallenge/tree/study/set-views-data).
 
+### Read Data from Views Practice
+
+The code written to practice ***Reading Data from Views*** is stored in the branch [study/read-views-data](https://github.com/EnduranceCode/AndroidBasicsChallenge/tree/study/read-views-data).
+
 ## Projects
 
 ### Project 1: Single Screen App
