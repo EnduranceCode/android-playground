@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 /**
@@ -48,12 +49,18 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
+        // Get Client's name
+        EditText clientNameInput = (EditText) findViewById(R.id.clientName);
+        String clientName = clientNameInput.getText().toString();
+        // Check if the client wants Whipped Cream
         CheckBox whippedCreamCheckbox = (CheckBox) findViewById(R.id.ToppingsWhippedCream);
         boolean hasWhippedCream = whippedCreamCheckbox.isChecked();
+        // Check if the client wants chocolate
         CheckBox chocolateCheckbox = (CheckBox) findViewById(R.id.ToppingsChocolate);
         boolean hasChocolate = chocolateCheckbox.isChecked();
+        // Calculate the order's price
         int price = calculatePrice();
-        String priceMessage = createOrderSummary(price, hasWhippedCream, hasChocolate);
+        String priceMessage = createOrderSummary(clientName, hasWhippedCream, hasChocolate, price);
         displayMessage(priceMessage);
     }
 
@@ -69,13 +76,14 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Creates order summary message
      *
-     * @param price           of the order
+     * @param clientName
      * @param hasWhippedCream
      * @param hasChocolate
+     * @param price           of the order
      * @return text message
      */
-    private String createOrderSummary(int price, boolean hasWhippedCream, boolean hasChocolate) {
-        String priceMessage = "Name: Lyla the Labyrinth";
+    private String createOrderSummary(String clientName, boolean hasWhippedCream, boolean hasChocolate, int price) {
+        String priceMessage = "Name: " + clientName;
         priceMessage += "\n" + "Add Whipped Cream? " + hasWhippedCream;
         priceMessage += "\n" + "Add Chocolate? " + hasChocolate;
         priceMessage += "\n" + "Quantity: " + quantity;
