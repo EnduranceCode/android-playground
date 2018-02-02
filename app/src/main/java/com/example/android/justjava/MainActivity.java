@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     public void increment(View view) {
         if (quantity >= 100) {
             Toast.makeText(getApplicationContext(),
-                    "Can't order more than 100 coffees!",
+                    getString(R.string.upper_limit),
                     Toast.LENGTH_SHORT).show();
             return;
         }
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     public void decrement(View view) {
         if (quantity == 1) {
             Toast.makeText(getApplicationContext(),
-                    "Can't order less than 1 coffee!",
+                    getString(R.string.lower_limit),
                     Toast.LENGTH_SHORT).show();
             return;
         }
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         //Send e-mail with the order
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this
-        intent.putExtra(Intent.EXTRA_SUBJECT, "JustJava order for " + clientName);
+        intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.order_email_subject, clientName));
         intent.putExtra(Intent.EXTRA_TEXT, priceMessage);
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
@@ -112,12 +112,12 @@ public class MainActivity extends AppCompatActivity {
      * @return text message
      */
     private String createOrderSummary(String clientName, boolean hasWhippedCream, boolean hasChocolate, int price) {
-        String priceMessage = "Name: " + clientName;
-        priceMessage += "\n" + "Add Whipped Cream? " + hasWhippedCream;
-        priceMessage += "\n" + "Add Chocolate? " + hasChocolate;
-        priceMessage += "\n" + "Quantity: " + quantity;
-        priceMessage += "\n" + "Total: " + price + " €";
-        priceMessage += "\n" + "Thank you!";
+        String priceMessage = getString(R.string.order_summary_name, clientName);
+        priceMessage += "\n" + getString(R.string.order_summary_whipped_cream_option,  hasWhippedCream);
+        priceMessage += "\n" + getString(R.string.order_summary_chocolate_option, hasChocolate);
+        priceMessage += "\n" + getString(R.string.order_summary_quantity, quantity);
+        priceMessage += "\n" + getString(R.string.order_summary_total, price);
+        priceMessage += "\n" + getString(R.string.order_summary_thank_you);
         return priceMessage;
     }
 

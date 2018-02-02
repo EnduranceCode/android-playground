@@ -1,10 +1,30 @@
-<resources>
-    <string name="app_name">Just Java</string>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" translatable="false">Just Java</string>
+    <!-- Name hint -->
     <string name="name">Name</string>
+
     <string name="toppings">Toppings</string>
     <string name="whipped_cream">Whipped Cream</string>
     <string name="chocolate">Chocolate</string>
     <string name="quantity">Quantity</string>
     <string name="price">Order Summary</string>
     <string name="order">Order</string>
+    <!-- Toast message when the order upper limit is reached -->
+    <string name="upper_limit">Can\'t order more than 100 coffees!</string>
+    <!-- Toast message when the order lower limit is reached -->
+    <string name="lower_limit">Can\'t order less than 1 coffee!</string>
+    <!-- Order e-ail subject line -->
+    <string name="order_email_subject">Just Java Order for <xliff:g id="clientName" example="Ricardo">%s</xliff:g></string>
+    <!-- Order Summary: Line with client's name -->
+    <string name="order_summary_name">Name: <xliff:g id="clientName" example="Ricardo">%s</xliff:g></string>
+    <!-- Order Summary: Line for Whipped Cream option -->
+    <string name="order_summary_whipped_cream_option">Add Whipped Cream? <xliff:g id="whippedCreamBoolean" example="true">%b</xliff:g></string>
+    <!-- -->
+    <string name="order_summary_chocolate_option">Add Chocolate? <xliff:g id="chocolateBoolean" example="true">%b</xliff:g></string>
+    <!-- Order Summary: Quantity -->
+    <string name="order_summary_quantity">Quantity: <xliff:g id="quantity" example="1">%d</xliff:g></string>
+    <!-- Order Summary: Price -->
+    <string name="order_summary_total">Total: <xliff:g id="price" example="5">%d</xliff:g> €</string>
+    <!-- Order Summary: Tahnk ypu message -->
+    <string name="order_summary_thank_you">Thank You!</string>
 </resources>
