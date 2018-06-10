@@ -21,3 +21,12 @@ This project's code is stored in the branch [project2](https://github.com/Endura
 
 #### Project Overview
 The goal of this project is to create a Score Keeper App which gives a user the ability to keep track of the score of two different teams/players playing a game/sport. The choosen sport for this app is [Taekwondo](https://en.wikipedia.org/wiki/Taekwondo).
+
+## Practice Sets
+
+### Practice Set: Object-Oriented Programming 
+
+This Practice Set's code is stored in the branch [practiceSet-oop](https://github.com/EnduranceCode/GoogleDeveloperNanodegreeScholarship/tree/practiceSet-oop).
+
+#### Practice Set Goal
+The goal of this Practice Set is to use object-oriented programming techniques to create a simple user profile that gives a basic introduction of a person.
