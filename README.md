@@ -22,6 +22,13 @@ This project's code is stored in the branch [project2](https://github.com/Endura
 #### Project Overview
 The goal of this project is to create a Score Keeper App which gives a user the ability to keep track of the score of two different teams/players playing a game/sport. The choosen sport for this app is [Taekwondo](https://en.wikipedia.org/wiki/Taekwondo).
 
+### Project 3 - Quiz App
+
+This project's code is stored in the branch [project3](https://github.com/EnduranceCode/GoogleDeveloperNanodegreeScholarship/tree/project3).
+
+#### Project Overview
+The goal is to create an educational app that quizzes a user about Triathlon Olympic History. It is required a minimum of 4 questions and a maximum of 10 quiz questions, including at least one check box, one radio button, and one text entry.
+
 ## Practice Sets
 
 ### Practice Set: Object-Oriented Programming 
