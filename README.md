@@ -37,3 +37,9 @@ This Practice Set's code is stored in the branch [practiceSet-oop](https://githu
 
 #### Practice Set Goal
 The goal of this Practice Set is to use object-oriented programming techniques to create a simple user profile that gives a basic introduction of a person.
+
+## Lessons
+
+### Multiscreen Apps
+
+The code developed following the Multiscreen Apps lessons is stored in the branch [lesson-multiscreenapp](https://github.com/EnduranceCode/GoogleDeveloperNanodegreeScholarship/tree/lesson-multiscreenapps). 
