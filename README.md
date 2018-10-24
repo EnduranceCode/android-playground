@@ -34,7 +34,7 @@ The goal is to create an educational app that quizzes a user about Triathlon Oly
 This project's code is stored in the branch [project4](https://github.com/EnduranceCode/GoogleDeveloperNanodegreeScholarship/tree/project4).
 
 #### Project Overview
-The goal is to design and layout a music playing app that displays the list of available songs in a ListView or a GridView, navigates to a details screen of the currently playing song and uses explicit intents to navigate around the app. For this project, ** the app does not actually needs to play music**.
+The goal is to design and layout a music playing app that displays the list of available songs in a ListView or a GridView, navigates to a details screen of the currently playing song and uses explicit intents to navigate around the app. For this project, **the app does not actually needs to play music**.
 
 Data about each song should be stored in a custom class that is retrieved and displayed via a Loop and Adapter.
 
