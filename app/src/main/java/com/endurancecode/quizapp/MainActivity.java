@@ -10,8 +10,10 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    int score = 0;
-    String userName = "";
+    private String userName = "";
+    private String cityName = "";
+    private int score = 0;
+    private int numCorrectOptions = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +21,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         if (savedInstanceState != null) {
-            score = savedInstanceState.getInt("SCORE");
             userName = savedInstanceState.getString("USER_NAME");
+            userName = savedInstanceState.getString("CITY_NAME");
+            score = savedInstanceState.getInt("SCORE");
+            numCorrectOptions = savedInstanceState.getInt("NUM_CORRECT_OPTIONS");
         }
     }
 
@@ -28,8 +32,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
-        outState.putInt("SCORE", score);
         outState.putString("USER_NAME", userName);
+        outState.putString("CITY_NAME", cityName);
+        outState.putInt("SCORE", score);
+        outState.putInt("NUM_CORRECT_OPTIONS", numCorrectOptions);
     }
 
     public void calculateScore(View view) {
@@ -47,11 +53,19 @@ public class MainActivity extends AppCompatActivity {
          * Right answers taken from https://en.wikipedia.org/wiki/Triathlon_at_the_Summer_Olympics
          *
          * Grades
-         * Q2: 18 Points
-         * Q3: 12 Points
+         * Q2:  9 Points
+         * Q3:  9 Points
          * Q4: 12 Points
-         * Q5:  7 Points for each correct selected option (Total is 28 Points)
-         * Q6:  6 Points for each correct selected option (Total is 30 Points)
+         * Q5: 12 Points
+         * Q6:  7 Points for one correct answer
+         *     14 Points for two correct answers
+         *     21 Points for three correct answers
+         *     28 Points for four (all) correct answers
+         * Q7:  6 Points for one correct answer
+         *     12 Points for two correct answers
+         *     18 Points for three correct answers
+         *     24 Points for three correct answers
+         *     30 Points for five (all) correct answers
          *
          */
         else {
@@ -59,79 +73,99 @@ public class MainActivity extends AppCompatActivity {
             score = 0;
 
             // Check Question 2
-            if (((RadioButton) findViewById(R.id.Q2option2)).isChecked()) {
-                score = score + 18;
+            EditText inputCity = (EditText) findViewById(R.id.inputCity);
+            cityName = inputCity.getText().toString();
+            if (cityName.equals("Sidney") || cityName.equals("sidney")) {
+                score += 9;
             }
 
             // Check Question 3
-            if (((RadioButton) findViewById(R.id.Q3option4)).isChecked()) {
-                score = score + 12;
+            if (((RadioButton) findViewById(R.id.Q3option2)).isChecked()) {
+                score += 9;
             }
 
             // Check Question 4
-            if (((RadioButton) findViewById(R.id.Q4option5)).isChecked()) {
-                score = score + 12;
+            if (((RadioButton) findViewById(R.id.Q4option4)).isChecked()) {
+                score += 12;
             }
 
             // Check Question 5
-            // Check Option 1 of Question 5
-            if (((CheckBox) findViewById(R.id.Q5Option1)).isChecked()) {
-                score = score + 7;
-            }
-
-            // Check Question 5
-            // Check Option 4 of Question 5
-            if (((CheckBox) findViewById(R.id.Q5Option4)).isChecked()) {
-                score = score + 7;
-            }
-
-            // Check Question 5
-            // Check Option 6 of Question 5
-            if (((CheckBox) findViewById(R.id.Q5Option6)).isChecked()) {
-                score = score + 7;
-            }
-
-            // Check Question 5
-            // Check Option 10 of Question 5
-            if (((CheckBox) findViewById(R.id.Q5Option10)).isChecked()) {
-                score = score + 7;
+            if (((RadioButton) findViewById(R.id.Q5option5)).isChecked()) {
+                score += 12;
             }
 
             // Check Question 6
-            // Check Option 1 of Question 6
-            if (((CheckBox) findViewById(R.id.Q6Option1)).isChecked()) {
-                score = score + 6;
+            // Check if incorrect options are selected
+            if (((CheckBox) findViewById(R.id.Q6Option2)).isChecked() ||
+                    ((CheckBox) findViewById(R.id.Q6Option3)).isChecked() ||
+                    ((CheckBox) findViewById(R.id.Q6Option5)).isChecked() ||
+                    ((CheckBox) findViewById(R.id.Q6Option7)).isChecked() ||
+                    ((CheckBox) findViewById(R.id.Q6Option8)).isChecked() ||
+                    ((CheckBox) findViewById(R.id.Q6Option9)).isChecked()) {
+                score += 0;
+            } else {
+                // Count number of correct options selected
+                int numCorrectOptions = 0;
+                // Check Option 1 of Question 6
+                if (((CheckBox) findViewById(R.id.Q6Option1)).isChecked()) {
+                    numCorrectOptions += 1;
+                }
+                // Check Option 4 of Question 6
+                if (((CheckBox) findViewById(R.id.Q6Option4)).isChecked()) {
+                    numCorrectOptions += 1;
+                }
+                // Check Option 6 of Question 6
+                if (((CheckBox) findViewById(R.id.Q6Option6)).isChecked()) {
+                    numCorrectOptions += 1;
+                }
+                // Check Option 10 of Question 6
+                if (((CheckBox) findViewById(R.id.Q6Option10)).isChecked()) {
+                    numCorrectOptions += 1;
+                }
+                // Update the score according to the number of corrected options selected
+                score += numCorrectOptions * 7;
             }
 
-            // Check Question 6
-            // Check Option 3 of Question 6
-            if (((CheckBox) findViewById(R.id.Q6Option3)).isChecked()) {
-                score = score + 6;
-            }
-
-            // Check Question 6
-            // Check Option 4 of Question 6
-            if (((CheckBox) findViewById(R.id.Q6Option4)).isChecked()) {
-                score = score + 6;
-            }
-
-            // Check Question 6
-            // Check Option 4 of Question 5
-            if (((CheckBox) findViewById(R.id.Q6Option5)).isChecked()) {
-                score = score + 6;
-            }
-
-            // Check Question 6
-            // Check Option 10 of Question 5
-            if (((CheckBox) findViewById(R.id.Q6Option10)).isChecked()) {
-                score = score + 6;
+            // Check Question 7
+            // Check if incorrect options are selected
+            if (((CheckBox) findViewById(R.id.Q7Option2)).isChecked() ||
+                    ((CheckBox) findViewById(R.id.Q7Option6)).isChecked() ||
+                    ((CheckBox) findViewById(R.id.Q7Option7)).isChecked() ||
+                    ((CheckBox) findViewById(R.id.Q7Option8)).isChecked() ||
+                    ((CheckBox) findViewById(R.id.Q7Option9)).isChecked() ||
+                    ((CheckBox) findViewById(R.id.Q7Option11)).isChecked() ||
+                    ((CheckBox) findViewById(R.id.Q7Option12)).isChecked()) {
+                score += 0;
+            } else {
+                // Count number of correct options selected
+                int numCorrectOptions = 0;
+                // Check Option 1 of Question 7
+                if (((CheckBox) findViewById(R.id.Q7Option1)).isChecked()) {
+                    numCorrectOptions += 1;
+                }
+                // Check Option 3 of Question 7
+                if (((CheckBox) findViewById(R.id.Q7Option3)).isChecked()) {
+                    numCorrectOptions += 1;
+                }
+                // Check Option 4 of Question 7
+                if (((CheckBox) findViewById(R.id.Q7Option4)).isChecked()) {
+                    numCorrectOptions += 1;
+                }
+                // Check Option 4 of Question 7
+                if (((CheckBox) findViewById(R.id.Q7Option5)).isChecked()) {
+                    numCorrectOptions += 1;
+                }
+                // Check Option 10 of Question 7
+                if (((CheckBox) findViewById(R.id.Q7Option10)).isChecked()) {
+                    numCorrectOptions += 1;
+                }
+                score += numCorrectOptions * 6;
             }
 
             // Show score
             if (score >= 50) {
                 Toast.makeText(this, getString(R.string.showScoreOver50, userName, score), Toast.LENGTH_LONG).show();
-            }
-            else {
+            } else {
                 Toast.makeText(this, getString(R.string.showScoreBelow50, userName, score), Toast.LENGTH_LONG).show();
             }
         }
