@@ -13,9 +13,9 @@ public class SongsListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.songs_list);
 
-        // Hide Action Bar
+        /* Remove Action Bar drop shadow */
         if (getSupportActionBar() != null) {
-            getSupportActionBar().hide();
+            getSupportActionBar().setElevation(0);
         }
 
 

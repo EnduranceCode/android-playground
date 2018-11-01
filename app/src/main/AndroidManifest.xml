@@ -20,7 +20,12 @@
         </activity>
         <activity
             android:name=".SongDetails"
-            android:label="@string/details_activity" />
+            android:label="@string/details_activity"
+            android:parentActivityName=".SongsListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SongsListActivity" />
+        </activity>
     </application>
 
 </manifest>

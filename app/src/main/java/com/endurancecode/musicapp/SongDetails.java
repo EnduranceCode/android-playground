@@ -16,10 +16,16 @@ public class SongDetails extends AppCompatActivity {
         /* Set the content of the activity to use the song_details.xmllayout file */
         setContentView(R.layout.song_details);
 
-        /* Hide Action Bar */
+        /* Remove Action Bar drop shadow */
         if (getSupportActionBar() != null) {
-            getSupportActionBar().hide();
+            getSupportActionBar().setElevation(0);
         }
+
+        /* Provide up navigation
+         * Following documentation at
+         * https://developer.android.com/training/implementing-navigation/ancestral
+         * */
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         /* Stores the data sent from SongAdapter */
         String songTitle = getIntent().getStringExtra("TITLE");
