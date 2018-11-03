@@ -4,7 +4,7 @@
 
 This repository contains all the work developed in the [Google Developer Nanodegree Scholarship](https://sites.google.com/knowlabs.com/gdnd2017).
 
-Each project and in lesson work will be stored in a specific branch of this repository.
+Each project and all the written code following the course's lessons will be stored in a specific branch of this repository.
  
 ## Projects
 
@@ -38,17 +38,17 @@ The goal is to design and layout a music playing app that displays the list of a
 
 Data about each song should be stored in a custom class that is retrieved and displayed via a Loop and Adapter.
 
+## Lessons
+
+### Multi-screen Apps
+
+The code developed following the Multi-screen Apps lessons is stored in the branch [study/multi-screen-apps](https://github.com/EnduranceCode/GoogleDeveloperNanodegreeScholarship/tree/study/multi-screen-apps). 
+
 ## Practice Sets
 
 ### Practice Set: Object-Oriented Programming 
 
-This Practice Set's code is stored in the branch [practiceSet-oop](https://github.com/EnduranceCode/GoogleDeveloperNanodegreeScholarship/tree/practiceSet-oop).
+This Practice Set's code is stored in the branch [ps/oop](https://github.com/EnduranceCode/GoogleDeveloperNanodegreeScholarship/tree/practice/oop).
 
 #### Practice Set Goal
 The goal of this Practice Set is to use object-oriented programming techniques to create a simple user profile that gives a basic introduction of a person.
-
-## Lessons
-
-### Multiscreen Apps
-
-The code developed following the Multiscreen Apps lessons is stored in the branch [lesson-multiscreenapp](https://github.com/EnduranceCode/GoogleDeveloperNanodegreeScholarship/tree/lesson-multiscreenapps). 
