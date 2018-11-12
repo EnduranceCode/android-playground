@@ -38,6 +38,14 @@ The goal is to design and layout a music playing app that displays the list of a
 
 Data about each song should be stored in a custom class that is retrieved and displayed via a Loop and Adapter.
 
+### Project 5 - Tour Guide App
+
+This project's code is stored in the branch [project5](https://github.com/EnduranceCode/GoogleDeveloperNanodegreeScholarship/tree/project5).
+
+#### Project Overview
+
+The goal is to create a Tour Guide App which presents relevant information to a user who’s visiting a city. The app can list top attractions, restaurants, public places, or events for the city. It can contain all the best known secrets that only locals know.
+
 ## Lessons
 
 ### Multi-screen Apps
