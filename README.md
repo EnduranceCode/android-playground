@@ -50,7 +50,11 @@ The goal is to create a Tour Guide App which presents relevant information to a 
 
 ### Multi-screen Apps
 
-The code developed following the Multi-screen Apps lessons is stored in the branch [study/multi-screen-apps](https://github.com/EnduranceCode/GoogleDeveloperNanodegreeScholarship/tree/study/multi-screen-apps). 
+The code developed following the Multi-screen Apps lessons is stored in the branch [study/multi-screen-apps](https://github.com/EnduranceCode/GoogleDeveloperNanodegreeScholarship/tree/study/multi-screen-apps).
+
+### Networking
+
+The code developed following the Networking lessons is stored in the branch [study/networking](https://github.com/EnduranceCode/GoogleDeveloperNanodegreeScholarship/tree/study/networking).
 
 ## Practice Sets
 
