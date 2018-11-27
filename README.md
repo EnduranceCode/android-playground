@@ -58,12 +58,19 @@ The code developed following the Networking lessons is stored in the branch [stu
 
 ## Practice Sets
 
-### Practice Set: Object-Oriented Programming 
+### Practice Set: Object-Oriented Programming
 
 This Practice Set's code is stored in the branch [practice/oop](https://github.com/EnduranceCode/GoogleDeveloperNanodegreeScholarship/tree/practice/oop).
 
 #### Practice Set Goal
 The goal of this Practice Set is to use object-oriented programming techniques to create a simple user profile that gives a basic introduction of a person.
+
+### Practice Set: JSON Parsing and HTTP Networking
+
+This Practice Set's code is stored in the branch [practice/json-http](https://github.com/EnduranceCode/GoogleDeveloperNanodegreeScholarship/tree/practice/json-http).
+
+#### Practice Set Goal
+The goal of this Practice Set is to gain a solid foundation of the concepts related to communicate and request for information via JSON Parsing and HTTP Networking.
 
 ## Samples
 
