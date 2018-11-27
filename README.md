@@ -96,6 +96,13 @@ The Soonami App code is stored in the branch [sample/http-request](https://githu
 
 This app displays information about a single earthquake event and whether or not there was a tsunami alert issued for it. The original code of this app is stored at [GitHub](https://github.com/udacity/ud843_Soonami).
 
+
+### Sample: Did You Feel It? App
+
+Did You Feel It? App code is stored in the branch [sample/threads-parallelism](https://github.com/EnduranceCode/GoogleDeveloperNanodegreeScholarship/tree/sample/threads-parallelism).
+
+This app displays the perceived strength of a single earthquake event based on the DYFI indicator. The original code of this app is stored at [GitHub](https://github.com/udacity/ud843_DidYouFeelIt).
+
 #### Sample's Goal
 
-This is a small app developed to explore the use of [http requests](https://developer.android.com/reference/java/net/HttpURLConnection).
+This is a small app developed to explore the use of [processes and threads](https://developer.android.com/guide/components/processes-and-threads) in the Android Framework.
