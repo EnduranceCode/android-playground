@@ -72,6 +72,10 @@ The code developed following the Multi-screen Apps lessons is stored in the bran
 
 The code developed following the Networking lessons is stored in the branch [study/networking](https://github.com/EnduranceCode/GoogleDeveloperNanodegreeScholarship/tree/study/networking).
 
+### Data Storage
+
+The code developed following the Data Storage lessons is stored in the branch [study/data-storage](https://github.com/EnduranceCode/GoogleDeveloperNanodegreeScholarship/tree/study/data-storage).
+
 ## Practice Sets
 
 ### Practice Set: Object-Oriented Programming
