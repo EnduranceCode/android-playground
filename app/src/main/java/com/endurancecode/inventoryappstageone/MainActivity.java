@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.endurancecode.inventoryappstageone.data.InventoryContract.Products;
@@ -21,8 +22,79 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /* Temporary method call to test the insertData() method */
-        insertData("Test Product", 12.34, 1, "EnduranceCode", "243 000 000");
+        /**
+         * Test the database java code manipulation
+         */
+        testDatabaseJavaManipulationCode();
+    }
+
+    /**
+     * Temporary method to test the database java manipulation code
+     */
+    private void testDatabaseJavaManipulationCode() {
+
+        /* Test the insertData() method */
+        insertData("Product", 12.34, 1, "Supplier", "243 000 000");
+
+        /* Test the queryData() method */
+        Cursor queryDatabaseCursor = queryData();
+
+        /* Get the temporary TextView to test the App */
+        TextView temporaryTestTextView = (TextView) findViewById(R.id.temporary);
+
+        try {
+            /*
+             * Create a header in the Text View that looks like this:
+             *
+             * The pets table contains <number of rows in Cursor> pets.
+             * _id - name - price - quantity - supplier -- supplier_phone
+             *
+             * In the while loop below, iterate through the rows of the cursor and display
+             * the information from each column in this order.
+             */
+            temporaryTestTextView.setText("The product's table contains "
+                    + queryDatabaseCursor.getCount()
+                    + " products \n\n");
+            temporaryTestTextView.append(Products._ID + " - "
+                    + Products.PRODUCT_NAME + " - "
+                    + Products.PRICE + " - "
+                    + Products.QUANTITY + " - "
+                    + Products.SUPPLIER + " - "
+                    + Products.SUPPLIER_PHONE + "\n");
+
+            /* Get the index of the table's columns */
+            int idColumnIndex = queryDatabaseCursor.getColumnIndex(Products._ID);
+            int nameColumnIndex = queryDatabaseCursor.getColumnIndex(Products.PRODUCT_NAME);
+            int priceColumnIndex = queryDatabaseCursor.getColumnIndex(Products.PRICE);
+            int quantityColumnIndex = queryDatabaseCursor.getColumnIndex(Products.QUANTITY);
+            int supplierColumnIndex = queryDatabaseCursor.getColumnIndex(Products.SUPPLIER);
+            int phoneColumnIndex = queryDatabaseCursor.getColumnIndex(Products.SUPPLIER_PHONE);
+
+            /* Iterate through all the returned rows in the cursor */
+            while (queryDatabaseCursor.moveToNext()) {
+
+                /*
+                 * Use that index to extract the String or Int value of the word
+                 * at the current row the cursor is on.
+                 */
+                int currentID = queryDatabaseCursor.getInt(idColumnIndex);
+                String currentName = queryDatabaseCursor.getString(nameColumnIndex);
+                double currentPrice = queryDatabaseCursor.getDouble(priceColumnIndex);
+                int currentQuantity = queryDatabaseCursor.getInt(quantityColumnIndex);
+                String currentSupplier = queryDatabaseCursor.getString(supplierColumnIndex);
+                String currentPhone = queryDatabaseCursor.getString(phoneColumnIndex);
+
+                /* Display the values from each column of the current row in the cursor in the TextView */
+                temporaryTestTextView.append("\n" + currentID + " - "
+                        + currentName + " - "
+                        + currentPrice + " - "
+                        + currentQuantity + " - "
+                        + currentSupplier + " - "
+                        + currentPhone);
+            }
+        } finally {
+            queryDatabaseCursor.close();
+        }
     }
 
     /**
@@ -60,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
         if (newRowID == -1) {
             Toast.makeText(this, "Error with inserting the new product", Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(this, "Produto inserido na linha " + newRowID, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Product insert at line " + newRowID, Toast.LENGTH_SHORT).show();
         }
     }
 
