@@ -1,6 +1,6 @@
 # Google Developer Nanodegree Scholarship
 
-This branch of the [AndroidBasicsNanodegree](https://github.com/EnduranceCode/GoogleDeveloperNanodegreeScholarship/tree/master) repository contains the code written for the **Ninth (and last Project**  of the [Google Developers Android Basics Nanodegree Scholarship by Udacity](https://sites.google.com/knowlabs.com/gdnd2017).
+This branch of the [AndroidBasicsNanodegree](https://github.com/EnduranceCode/GoogleDeveloperNanodegreeScholarship/tree/master) repository contains the code written for the **Ninth (and last) Project**  of the [Google Developers Android Basics Nanodegree Scholarship by Udacity](https://sites.google.com/knowlabs.com/gdnd2017).
 
 ## Project Overview
 
