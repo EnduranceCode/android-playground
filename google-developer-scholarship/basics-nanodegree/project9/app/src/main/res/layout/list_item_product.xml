@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    We have a button on the ListItem, so in order to prevent it from blocking focus
+    and disabling the onItemClickListener on the ListView we have to set
+    android:descendantFocusability="blocksDescendants"
+
+    Source:
+    https://syedasaraahmed.wordpress.com/2012/10/03/android-onitemclicklistener-not-responding-clickable-rowitem-of-custom-listview
+
+    See also: https://stackoverflow.com/a/45522137/8352877
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingTop="@dimen/mp_normal_vertical"
+    android:paddingBottom="@dimen/mp_normal_vertical">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        tools:text="Product Name" />
+
+    <RelativeLayout
+        android:id="@+id/second_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name">
+
+        <Button
+            android:id="@+id/sale_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sale"
+            tools:ignore="RelativeOverlap" />
+
+        <LinearLayout
+            android:id="@+id/data_layout"
+            android:layout_width="@dimen/data_layout_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/mp_big_horizontal"
+            android:layout_marginLeft="@dimen/mp_big_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                tools:text="5" />
+
+            <LinearLayout
+                android:id="@+id/price_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                    tools:text="12.34" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/mp_small_horizontal"
+                    android:layout_marginLeft="@dimen/mp_small_horizontal"
+                    android:text="@string/currency_symbol"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
